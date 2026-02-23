@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raining-cats-and-dogs-six.vercel.app/sitemap.xml

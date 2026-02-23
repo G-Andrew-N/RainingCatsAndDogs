@@ -22,6 +22,18 @@ export default function App() {
 
   useEffect(() => {
     document.title = 'Raining cats and dogs';
+
+    const currentUrl = window.location.href;
+
+    const canonicalLink = document.getElementById('canonical-link');
+    if (canonicalLink instanceof HTMLLinkElement) {
+      canonicalLink.href = currentUrl;
+    }
+
+    const ogUrlMeta = document.getElementById('og-url');
+    if (ogUrlMeta instanceof HTMLMetaElement) {
+      ogUrlMeta.content = currentUrl;
+    }
   }, []);
 
   const fetchAnimalImage = async (): Promise<string> => {
